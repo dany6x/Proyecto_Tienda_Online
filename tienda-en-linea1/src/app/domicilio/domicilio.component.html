@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <img src="/src/img/day.jpg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/home'">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Iniciar sesión</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <h2 class="text-center">Registrar Domicilio</h2>
+
+  <form>
+    <div class="form-group">
+      <label for="calle" class="text-center">Calle:</label>
+      <input type="text" class="form-control" id="calle" name="calle" [(ngModel)]="domicilio.calle" required>
+    </div>
+
+    <div class="form-group">
+      <label for="numeroInterior" class="text-center">Número Interior:</label>
+      <input type="text" class="form-control" id="numeroInterior" name="numeroInterior" [(ngModel)]="domicilio.numeroInterior">
+    </div>
+
+    <div class="form-group">
+      <label for="numeroExterior" class="text-center">Número Exterior:</label>
+      <input type="text" class="form-control" id="numeroExterior" name="numeroExterior" [(ngModel)]="domicilio.numeroExterior">
+    </div>
+
+    <div class="form-group">
+      <label for="codigoPostal" class="text-center">Código Postal:</label>
+      <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" [(ngModel)]="domicilio.codigoPostal" required>
+    </div>
+
+    <div class="form-group">
+      <label for="colonia" class="text-center">Colonia:</label>
+      <input type="text" class="form-control" id="colonia" name="colonia" [(ngModel)]="domicilio.colonia" required>
+    </div>
+
+    <div class="form-group">
+      <label for="municipio" class="text-center">Municipio:</label>
+      <input type="text" class="form-control" id="municipio" name="municipio" [(ngModel)]="domicilio.municipio" required>
+    </div>
+
+    <div class="form-group">
+      <label for="ciudad" class="text-center">Ciudad:</label>
+      <input type="text" class="form-control" id="ciudad" name="ciudad" [(ngModel)]="domicilio.ciudad" required>
+    </div>
+
+    <div class="form-group">
+      <label for="pais" class="text-center">País:</label>
+      <input type="text" class="form-control" id="pais" name="pais" [(ngModel)]="domicilio.pais" required>
+    </div>
+
+    <div class="form-group">
+      <label for="calle2" class="text-center">Calle 2:</label>
+      <input type="text" class="form-control" id="calle2" name="calle2" [(ngModel)]="domicilio.calle2">
+    </div>
+
+    <div class="form-group">
+      <label for="calle3" class="text-center">Calle 3:</label>
+      <input type="text" class="form-control" id="calle3" name="calle3" [(ngModel)]="domicilio.calle3">
+    </div>
+
+    <div class="form-group">
+      <label for="numeroContacto" class="text-center">Número de Contacto:</label>
+      <input type="text" class="form-control" id="numeroContacto" name="numeroContacto" [(ngModel)]="domicilio.numeroContacto" required>
+    </div>
+
+    <div class="form-group">
+      <label for="referencias" class="text-center">Referencias:</label>
+      <textarea class="form-control" id="referencias" name="referencias" rows="4" [(ngModel)]="domicilio.referencias"></textarea>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary" (click)="onSubmit()" >Registrar Domicilio</button>
+      <button class="btn btn-info" [routerLink]="'/home'">Inicio</button>
+    </div>
+  </form>
+</div>

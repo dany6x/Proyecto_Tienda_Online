@@ -1,0 +1,98 @@
+<!-- app.component.html -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <img src="/src/img/day.jpg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/home'">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/login'">Iniciar sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/carrito'">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+
+          <a class="nav-link" href="#">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Selección de Método de Pago</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5>Tarjeta de Crédito/Débito</h5>
+          <p>Seleccione esta opción si desea pagar con tarjeta de crédito o débito.</p>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#tarjetaModal">Ingresar Tarjeta</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5>Otro Método de Pago</h5>
+          <p>Seleccione esta opción si desea utilizar otro método de pago, como PayPal.</p>
+          <button class="btn btn-primary">Seleccionar Método</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="tarjetaModal" tabindex="-1" role="dialog" aria-labelledby="tarjetaModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tarjetaModalLabel">Ingresar Tarjeta de Pago</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="numeroTarjeta">Número de Tarjeta</label>
+            <input type="text" class="form-control" id="numeroTarjeta" placeholder="Ingrese el número de tarjeta">
+          </div>
+          <div class="form-group">
+            <label for="nombreTarjeta">Nombre en la Tarjeta</label>
+            <input type="text" class="form-control" id="nombreTarjeta" placeholder="Ingrese el nombre en la tarjeta">
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <label for="fechaExpiracion">Fecha de Expiración</label>
+              <input type="text" class="form-control" id="fechaExpiracion" placeholder="MM/AA">
+            </div>
+            <div class="col">
+              <label for="codigoSeguridad">Código de Seguridad</label>
+              <input type="text" class="form-control" id="codigoSeguridad" placeholder="CVV">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Guardar Tarjeta</button>
+      </div>
+    </div>
+  </div>
+</div>

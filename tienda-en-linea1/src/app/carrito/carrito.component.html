@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <img src="/src/img/day.jpg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/home'">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/login'" >Iniciar sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/carrito'">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+
+          <a class="nav-link" href="#">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="cart-container">
+  <h2>Carrito de Compra</h2>
+
+  <div class="cart-items">
+    <div class="cart-item">
+      <div class="item-details">
+        <h4>Producto 1</h4>
+        <p>Precio: $10.00</p>
+      </div>
+      <button class="btn-remove">Eliminar</button>
+    </div>
+
+    <div class="cart-item">
+      <div class="item-details">
+        <h4>Producto 2</h4>
+        <p>Precio: $20.00</p>
+      </div>
+      <button class="btn-remove">Eliminar</button>
+    </div>
+  </div>
+
+  <div class="total-price">
+    <p>Total: $30.00</p>
+    <button class="btn-buy" [routerLink]="'/pago'">Comprar</button>
+  </div>
+</div>
